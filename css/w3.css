@@ -1,0 +1,108 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.game-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.img-container {
+  -webkit-box-flex: 25%;
+  -ms-flex: 25%;
+  flex: 25%;
+  border: 1px solid;
+  position: relative;
+}
+
+/* Make the image to responsive */
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: red;
+  
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+
+.img-container.active .overlay {
+  opacity: 1;
+}
+
+/*
+.img-container:hover .overlay {
+  opacity: 1;
+} */
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+
+.icon {
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+/* When you move the mouse over the icon, change color */
+
+.fa-user.active {
+  color: #eee;
+}
+
+/* .fa-user:hover {
+  color: #eee;
+} */
